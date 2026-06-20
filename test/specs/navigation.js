@@ -1,4 +1,3 @@
-import { expect } from '@wdio/globals'
 import HomePage from "../pageobjects/home.page"
 
 describe('Navigation', () => {

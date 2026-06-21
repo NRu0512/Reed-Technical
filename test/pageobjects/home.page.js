@@ -62,6 +62,7 @@ class HomePage extends Page {
     async open () {
         const url = super.open();
         await this.listOrigin.waitForDisplayed();
+        await browser.pause(100);   // wait for animation to finish
         return url;
     }
 }

@@ -6,7 +6,6 @@ import SearchResultsPage from '../pageobjects/searchResults.page';
 describe('Search', () => {
     beforeEach('go to home page', async () => {
         await browser.reloadSession();
-
         await HomePage.open();
     })
 

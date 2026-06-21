@@ -99,4 +99,33 @@ describe('Restful-Booker', () => {
             expect(response.status).to.equal(400);
         })
     })
+
+    describe('DeleteBooking', () => {
+        it('should delete an existing booking', async () => {
+            const bookingIds = (await apiClient.get(`${baseUrl}/booking`)).data;
+            const id = bookingIds[Math.floor(Math.random() * bookingIds.length)].bookingid;
+
+            const token = await createToken();
+            const headersWithToken = {
+                'Accept': 'application/json',
+                'Cookie': `token=${token}`
+            };
+            let response = await apiClient.delete(`${baseUrl}/booking/${id}`, { headers: headersWithToken });
+            expect(response.status).to.equal(201);
+
+            response = await apiClient.get(`${baseUrl}/booking/${id}`, { headers: headers });
+            expect(response.status).to.equal(404);
+        })
+
+        it('should return 405 when deleting a non-existent booking', async () => {
+            const id = getNonExistentBookingId();
+            const token = await createToken();
+            const headersWithToken = {
+                'Accept': 'application/json',
+                'Cookie': `token=${token}`
+            };
+            const response = await apiClient.delete(`${baseUrl}/booking/${id}`, { headers: headersWithToken });
+            expect(response.status).to.equal(405);
+        })
+    })
 })

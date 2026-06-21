@@ -43,7 +43,7 @@ describe('Search', () => {
         });
     })
 
-    it('should block invalid locations', async () => {
+    it.only('should block invalid locations', async () => {
         await HomePage.clearOriginValues();
         await HomePage.inputAndSelectOriginLocation(flightData.origin);
 

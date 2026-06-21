@@ -1,10 +1,7 @@
 # Reed-Technical
-This is a test automation project the tests the UI of the website https://www.cheapflights.com.au/, specifically the Search functionality,
-and the endpoints in https://restful-booker.herokuapp.com/apidoc/index.html#api-Booking. This makes use of NodeJS, WebdriverIO, Mocha, and Chai.
-This is written in Javascript.
+This is a test automation project the tests the UI of the website https://www.cheapflights.com.au/, specifically the Search functionality, and the endpoints in https://restful-booker.herokuapp.com/apidoc/index.html#api-Booking. This makes use of NodeJS, WebdriverIO, Mocha, and Chai. This is written in Javascript.
 
-This project is created according to the specifications of the technical assessment provided by Reed 
-([project-specifications.pdf](https://github.com/user-attachments/files/29181197/project-specifications.pdf)).
+This project is created according to the specifications of the technical assessment provided by Reed ([project-specifications.pdf](https://github.com/user-attachments/files/29181197/project-specifications.pdf)).
 
 # Setup
 – Install NodeJs  

@@ -9,6 +9,11 @@
     "chai": "^6.2.2"
   },
   "scripts": {
-    "test": "wdio run ./wdio.conf.js"
+    "test": "wdio run ./wdio.conf.js",
+    "ui-test": "wdio run ./wdio.conf.js --suite ui",
+    "api-test": "wdio run ./wdio.conf.js --suite api"
+  },
+  "dependencies": {
+    "axios": "^1.18.0"
   }
 }

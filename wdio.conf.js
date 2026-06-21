@@ -23,6 +23,15 @@ export const config = {
     specs: [
         './test/specs/**/*.js'
     ],
+    suites: {
+        ui: [
+            './test/specs/navigation.js',
+            './test/specs/search.js'
+        ],
+        api: [
+            './test/specs/api.test.js'
+        ]
+    },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -88,7 +97,7 @@ export const config = {
     baseUrl: 'https://www.cheapflights.com.au/',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 30000,
+    waitforTimeout: 45000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response

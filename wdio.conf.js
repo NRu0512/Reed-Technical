@@ -1,3 +1,5 @@
+const isHeadless = process.env.HEADLESS === 'true';
+
 export const config = {
     //
     // ====================
@@ -60,7 +62,10 @@ export const config = {
     //
     capabilities: [{
         // capabilities for local browser web tests
-        browserName: 'microsoftedge'    // or "firefox", "chrome", "safari"
+        browserName: 'microsoftedge',   // or "firefox", "chrome", "safari"
+        'ms:edgeOptions': {
+            args: isHeadless ? ['--headless', '--disable-gpu'] : []
+        }
     }],
 
     //
